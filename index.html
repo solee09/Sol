@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Playlist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="left-side">
+        <h1>Playlist</h1>
+        <p>Songs that remind me of you</p>
+      </div>
+      <!-- RIGHT SIDE -->
+      <div class="right-side">
+        <!-- Hidden radios -->
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
+        <input type="radio" name="slider" id="item-4" />
+        <input type="radio" name="slider" id="item-5" />
+
+        <!-- CARDS -->
+        <div class="cards">
+          <!-- Song 1: To The Bone -->
+          <label class="card" for="item-1" id="song-1">
+            <img src="https://i1.sndcdn.com/artworks-000642032674-e2ml0i-t500x500.jpg" alt="To The Bone" />
+          </label>
+          <!-- Song 2: Nothing's Gonna Change My Love for you -->
+          <label class="card" for="item-2" id="song-2">
+            <img src="https://i.ytimg.com/vi/4tf0ZjN1UPE/sddefault.jpg" alt="Nothing's Gonna Change My Love for you" />
+          </label>
+          <!-- Song 3: Inner Child -->
+          <label class="card" for="item-3" id="song-3">
+            <img src="https://i.scdn.co/image/ab67616d0000b273c56419dabfb438b9ad831b23" alt="Inner Child" />
+          </label>
+          <!-- Song 4: You are mine -->
+          <label class="card" for="item-4" id="song-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIZaSWXHCR9Lm0Y-O5PxFC9B_jw2nu3Q_dw&s" alt="You are mine" />
+          </label>
+          <!-- Song 5: Understand -->
+          <label class="card" for="item-5" id="song-5">
+            <img src="https://static.wikia.nocookie.net/keshi/images/4/45/Gabriel_album_cover.jpg/revision/latest?cb=20220323064224" alt="Understand" />
+          </label>
+        </div>
+
+        <!-- PLAYER -->
+        <div class="player">
+          <!-- SONG INFO 1: To The Bone -->
+          <div class="song-info active" id="song-info-1">
+            <div class="title">To The Bone</div>
+            <div class="song-details">
+              <span class="artist">Pamungkas</span>
+              <span class="duration">1:33</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 2: Nothing's Gonna Change My Love for you -->
+          <div class="song-info" id="song-info-2">
+            <div class="title">Nothing's Gonna Change My Love for you</div>
+            <div class="song-details">
+              <span class="artist">George Benson</span>
+              <span class="duration">1:01</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 3: Inner Child -->
+          <div class="song-info" id="song-info-3">
+            <div class="title">Inner Child</div>
+            <div class="song-details">
+              <span class="artist">TONEEJAY</span>
+              <span class="duration">0:28</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 4: You are mine -->
+          <div class="song-info" id="song-info-4">
+            <div class="title">You are mine</div>
+            <div class="song-details">
+              <span class="artist">S3RL</span>
+              <span class="duration">0:21</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 5: Understand -->
+          <div class="song-info" id="song-info-5">
+            <div class="title">Understand</div>
+            <div class="song-details">
+              <span class="artist">keshi</span>
+              <span class="duration">0:26</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+
+          <!-- PLAYER CONTROLS -->
+          <div class="controls">
+            <button id="prev">◁</button>
+            <button id="pause">▐▐</button>
+            <button id="next">▷</button>
+          </div>
+          <!-- EXTRA CONTROLS: Favorite Button Only -->
+          <div class="extra-controls">
+            <button id="favorite" class="favorite-btn">♡</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL (Using the provided pop-up content) -->
+    <div class="modal-overlay" id="notificationModal">
+      <div class="modal-content" id="modalContent">
+        <h2>Wifey sent you a playlist</h2>
+        <p>I love you:3</p>
+        <button class="modal-close" onclick="closeModal()">Open Playlist</button>
+      </div>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="scrpt.js"></script>
+  </body>
+</html>
